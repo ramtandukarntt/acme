@@ -9,7 +9,7 @@ metadata:
 spec:
   secretName: "tls-{{ .Values.jxRequirements.ingress.domain | replace "." "-" }}-p"
   issuerRef:
-    Group: cert-manager.io
+    group: cert-manager.io
     name: ca-cluster-issuer
 {{- if .Values.issuer.cluster }}
     kind: ClusterIssuer
